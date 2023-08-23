@@ -39,12 +39,11 @@ no.src = './img/NoButton.png'
 
 const canvas = document.querySelector('canvas')
 
-const scoreI = document.querySelector('#scoreI')
-const scoreE = document.querySelector('#scoreE')
-const scoreA = document.querySelector('#scoreA')
-const scoreC = document.querySelector('#scoreC')
+const scoreASB = document.querySelector('#scoreASB')
+const scoreBD = document.querySelector('#scoreBD')
 const scoreS = document.querySelector('#scoreS')
-const scoreM = document.querySelector('#scoreM')
+const scoreAN = document.querySelector('#scoreAN')
+const scoreML = document.querySelector('#scoreML')
 
 const c = canvas.getContext('2d')
 
@@ -392,27 +391,27 @@ function reset() {
     
     // Genie positioning
     
-    blueMan = [new npc({ x: 1050 , y: 100, image: genie }), new npc({ x: 2550 , y: 100, image: genie })
+    blueMan = [new npc({ x: 1050 , y: 195, image: genie }), new npc({ x: 2550 , y: 195, image: genie })
         , 
-        new npc({ x: 4100 , y: 100, image: genie }), new npc({ x: 7450 , y: 100, image: genie })
+        new npc({ x: 4100 , y: 195, image: genie }), new npc({ x: 7450 , y: 195, image: genie })
         , 
-        new npc({ x: 9000 , y: 100, image: genie })
+        new npc({ x: 9000 , y: 195, image: genie })
         , 
-        new npc({ x: 12200 , y: 100, image: genie })
+        new npc({ x: 12200 , y: 195, image: genie })
         , 
-        new npc({ x: 13800 , y: 100, image: genie })
+        new npc({ x: 13800 , y: 195, image: genie })
         ,
-        new npc({ x: 16700 , y: 100, image: genie })
+        new npc({ x: 16700 , y: 195, image: genie })
         ,
-        new npc({ x: 18180 , y: 100, image: genie })
+        new npc({ x: 18180 , y: 195, image: genie })
         ,
-        new npc({ x: 21850 , y: 100, image: genie })
+        new npc({ x: 21850 , y: 195, image: genie })
         ,
-        new npc({ x: 23350 , y: 100, image: genie })
+        new npc({ x: 23350 , y: 195, image: genie })
         ,
-        new npc({ x: 26600 , y: 100, image: genie })
+        new npc({ x: 26600 , y: 195, image: genie })
         ,
-        new npc({ x: 28100 , y: 100, image: genie })
+        new npc({ x: 28100 , y: 195, image: genie })
         ,
         new npc({ x: 29050 , y: 20, image: genieThanks })]
 
@@ -640,121 +639,85 @@ function animate() {
             // Question 1
 
             if (scrollOffset > 1000 && scrollOffset < 2100 && scoreBoard.className == ""){
-                scoreS.innerHTML= parseFloat(scoreS.innerHTML) + 3;
-                scoreE.innerHTML= parseFloat(scoreE.innerHTML) + 2;
-                scoreM.innerHTML= parseFloat(scoreM.innerHTML) + 1;
                 scoreBoard.classList = "Q1"
-                text.innerHTML = "Ah so you're shy huh? No problem there are plenty of majors that require less human interaction ;)"
+                text.innerHTML = "AWS has a lot of comprehensive AI and ML services and infrastructure! You can solve business problems in any industry and innovate with confidence!"
             }
             
             // Question 2
 
             else if(scrollOffset > 2600 && scrollOffset < 3500 && scoreBoard.className == "Q1"){
-                scoreE.innerHTML= parseFloat(scoreE.innerHTML) + 3;
-                scoreM.innerHTML= parseFloat(scoreM.innerHTML) + 2;
-                scoreS.innerHTML= parseFloat(scoreS.innerHTML) + 1;
                 scoreBoard.classList = "Q2"
-                text.innerHTML = "You probably like expressing yourself in other ways that don't include a pen lol"
+                text.innerHTML = "Sagemaker can build ML models with fully managed infrastructure. Deeplens is a deep learning-enabled video camera that is integrated with AWS ML services."
             }
             
             // Question 3
 
             else if(scrollOffset > 5900 && scrollOffset < 6700 && scoreBoard.className == "Q2"){
-                scoreI.innerHTML= parseFloat(scoreI.innerHTML) + 3;
-                scoreS.innerHTML= parseFloat(scoreS.innerHTML) + 2;
-                scoreE.innerHTML= parseFloat(scoreE.innerHTML) + 1;
                 scoreBoard.classList = "Q3"
-                text.innerHTML = "That's ok not everyone has the time for long talk and introspection hehe"
+                text.innerHTML = "Networking plays a vital part in AWS. Knowing some networking concepts can go a long way into helping you in your AWS journey!"
             }
 
             // Question 4
 
             else if(scrollOffset > 7400 && scrollOffset < 8600 && scoreBoard.className == "Q3"){
-                scoreA.innerHTML= parseFloat(scoreA.innerHTML) + 3;
-                scoreC.innerHTML= parseFloat(scoreC.innerHTML) + 2;
-                scoreI.innerHTML= parseFloat(scoreI.innerHTML) + 1;
                 scoreBoard.classList = "Q4"
-                text.innerHTML = "No problem science is kinda boring sometimes ay?"
+                text.innerHTML = "As the customer's organization grows, greater segmentation of services becomes necessary to monitor costs, control access, and provide easier environmental management."
             }
             
             // Question 5
 
             else if(scrollOffset > 10400 && scrollOffset < 11800 && scoreBoard.className == "Q4"){
-                scoreM.innerHTML= parseFloat(scoreM.innerHTML) + 3;
-                scoreS.innerHTML= parseFloat(scoreS.innerHTML) + 2;
-                scoreA.innerHTML= parseFloat(scoreA.innerHTML) + 1;
                 scoreBoard.classList = "Q5"
-                text.innerHTML = "Ok there are a lot of non living things you could be interested in!"
+                text.innerHTML = "Knowing how to troubleshoot your network issues can help your organization a lot!"
             }
 
             // Question 6
 
             else if(scrollOffset > 12000 && scrollOffset < 13400 && scoreBoard.className == "Q5"){
-                scoreC.innerHTML= parseFloat(scoreC.innerHTML) + 3;
-                scoreI.innerHTML= parseFloat(scoreI.innerHTML) + 2;
-                scoreA.innerHTML= parseFloat(scoreA.innerHTML) + 1;
                 scoreBoard.classList = "Q6"
-                text.innerHTML = "Ah you're more of a good listener then :)"
+                text.innerHTML = "Security is a key pillar in the AWS Well-Architected Framework and it is very important to every company."
             }
 
             // Question 7
 
             else if(scrollOffset > 15000 && scrollOffset < 16400 && scoreBoard.className == "Q6"){
-                scoreE.innerHTML= parseFloat(scoreE.innerHTML) + 3;
-                scoreI.innerHTML= parseFloat(scoreI.innerHTML) + 2;
-                scoreM.innerHTML= parseFloat(scoreM.innerHTML) + 1;
                 scoreBoard.classList = "Q7"
-                text.innerHTML = "Yeah I get it... Web design is hard, just as hard as it was to make this game أ‿أ"
+                text.innerHTML = "You need WAF to Protect your web applications from common exploits and you need IAM to manage access to your recources!"
             }
 
             // Question 8
 
             else if(scrollOffset > 16500 && scrollOffset < 17500 && scoreBoard.className == "Q7"){
-                scoreI.innerHTML= parseFloat(scoreI.innerHTML) + 3;
-                scoreA.innerHTML= parseFloat(scoreA.innerHTML) + 2;
-                scoreC.innerHTML= parseFloat(scoreC.innerHTML) + 1;
                 scoreBoard.classList = "Q8"
-                text.innerHTML = "That's ok we all like to stick with what we're used to!"
+                text.innerHTML = "It's essential to carry out security assessments like penetration testing to reveal critical security weaknesses in an AWS deployment."
             }
 
             // Question 9
 
             else if(scrollOffset > 20000 && scrollOffset < 21450 && scoreBoard.className == "Q8"){
-                scoreC.innerHTML= parseFloat(scoreC.innerHTML) + 3;
-                scoreA.innerHTML= parseFloat(scoreA.innerHTML) + 2;
-                scoreE.innerHTML= parseFloat(scoreE.innerHTML) + 1;
                 scoreBoard.classList = "Q9"
-                text.innerHTML = "Ah we're getting old brotha I'm 65,000 years old أ‿أ"
+                text.innerHTML = "Organizations will benefit from big data technologies when existing databases and applications can no longer scale to support sudden increases in volume, variety, and velocity of data."
             }
 
             // Question 10
 
             else if(scrollOffset > 21600 && scrollOffset < 23000 && scoreBoard.className == "Q9"){
-                scoreM.innerHTML= parseFloat(scoreM.innerHTML) + 3;
-                scoreS.innerHTML= parseFloat(scoreS.innerHTML) + 2;
-                scoreE.innerHTML= parseFloat(scoreE.innerHTML) + 1;
                 scoreBoard.classList = "Q10"
-                text.innerHTML = "I get it... Sometimes we just need to get stuff done!"
+                text.innerHTML = "AWS provides a diverse selection of analytics services that fit all your data analytics needs and enables organizations to reinvent their business with data."
             }
 
              // Question 11
 
              else if(scrollOffset > 25000 && scrollOffset < 26150 && scoreBoard.className == "Q10"){
-                scoreS.innerHTML= parseFloat(scoreS.innerHTML) + 3;
-                scoreE.innerHTML= parseFloat(scoreE.innerHTML) + 2;
-                scoreM.innerHTML= parseFloat(scoreM.innerHTML) + 1;
                 scoreBoard.classList = "Q11"
-                text.innerHTML = "Not gonna lie that stuff is boring as hell ಠ‿↼"
+                text.innerHTML = "The Alexa Skills Kit gives developers the ability to utilize Alexa's capabilities by building engaging voice and visual experiences."
             }
 
             // Question 12
 
             else if(scrollOffset > 26400 && scrollOffset < 28000 && scoreBoard.className == "Q11"){
-                scoreA.innerHTML= parseFloat(scoreA.innerHTML) + 3;
-                scoreE.innerHTML= parseFloat(scoreE.innerHTML) + 2;
-                scoreM.innerHTML= parseFloat(scoreM.innerHTML) + 1;
                 scoreBoard.classList = "Q12"
-                text.innerHTML = "Life's pretty hard not gonna lie... I can barely help myself أ‿أ"
+                text.innerHTML = "There's so much potential to voice user interfaces (VUIs). A VUI is a technology that allows people to use their voices to interact with computers and devices."
             }
 
         }
@@ -774,122 +737,98 @@ function animate() {
             // Question 1
 
             if (scrollOffset > 1000 && scrollOffset < 2100 && scoreBoard.className == ""){
-                scoreI.innerHTML= parseFloat(scoreI.innerHTML) + 3;
-                scoreA.innerHTML= parseFloat(scoreA.innerHTML) + 2;
-                scoreC.innerHTML= parseFloat(scoreC.innerHTML) + 1;
+                scoreML.innerHTML= parseFloat(scoreML.innerHTML) + 6;
                 scoreBoard.classList = "Q1"
-                text.innerHTML = "Ah you're a distinguished fellow that is not afraid to speak freely and be yourself"
+                text.innerHTML = "Great! AWS truly has some of the most comprehensive set of AI and ML services and infrastructure!"
             }
             
             // Question 2
 
             else if(scrollOffset > 2600 && scrollOffset < 3500 && scoreBoard.className == "Q1"){
-                scoreA.innerHTML= parseFloat(scoreA.innerHTML) + 3;
-                scoreC.innerHTML= parseFloat(scoreC.innerHTML) + 2;
-                scoreI.innerHTML= parseFloat(scoreI.innerHTML) + 1;
+                scoreML.innerHTML= parseFloat(scoreML.innerHTML) + 6;
                 scoreBoard.classList = "Q2"
-                text.innerHTML = "Awesome! You'd be surprised how many majors there are that might benefit from your artistic expertise :)"
+                text.innerHTML = "Awesome! Deeplens and Sagemaker are really good and diverse services for ML!"
             }
 
             
             // Question 3
 
             else if(scrollOffset > 5900 && scrollOffset < 6700 && scoreBoard.className == "Q2"){
-                scoreC.innerHTML= parseFloat(scoreC.innerHTML) + 3;
-                scoreM.innerHTML= parseFloat(scoreM.innerHTML) + 2;
-                scoreA.innerHTML= parseFloat(scoreA.innerHTML) + 1;
+                scoreAN.innerHTML= parseFloat(scoreAN.innerHTML) + 5;
                 scoreBoard.classList = "Q3"
-                text.innerHTML = "You must be quite a knowledgeable fella haha"
+                text.innerHTML = "That's good to hear! Networking plays a vital part in AWS."
             }
 
             // Question 4
 
             else if(scrollOffset > 7400 && scrollOffset < 8600 && scoreBoard.className == "Q3"){
-                scoreS.innerHTML= parseFloat(scoreS.innerHTML) + 3;
-                scoreE.innerHTML= parseFloat(scoreE.innerHTML) + 2;
-                scoreM.innerHTML= parseFloat(scoreM.innerHTML) + 1;
+                scoreAN.innerHTML= parseFloat(scoreAN.innerHTML) + 5;
                 scoreBoard.classList = "Q4"
-                text.innerHTML = "I see that we have a nerd in our game ;)"
+                text.innerHTML = "As the customer's organization grows, greater segmentation of services becomes vital to monitor costs, control access, and provide environmental management."
             }
 
             // Question 5
             
             else if(scrollOffset > 10400 && scrollOffset < 11800 && scoreBoard.className == "Q4"){
-                scoreE.innerHTML= parseFloat(scoreE.innerHTML) + 3;
-                scoreI.innerHTML= parseFloat(scoreI.innerHTML) + 2;
-                scoreC.innerHTML= parseFloat(scoreC.innerHTML) + 1;
+                scoreAN.innerHTML= parseFloat(scoreAN.innerHTML) + 5;
                 scoreBoard.classList = "Q5"
-                text.innerHTML = "You probably have a kind heart :)"
+                text.innerHTML = "Knowing how to troubleshoot your network issues can go a long way in helping your organization!"
             }
 
             // Question 6
 
             else if(scrollOffset > 12000 && scrollOffset < 13400 && scoreBoard.className == "Q5"){
-                scoreM.innerHTML= parseFloat(scoreM.innerHTML) + 3;
-                scoreS.innerHTML= parseFloat(scoreS.innerHTML) + 2;
-                scoreE.innerHTML= parseFloat(scoreE.innerHTML) + 1;
+                scoreS.innerHTML= parseFloat(scoreS.innerHTML) + 4;
                 scoreBoard.classList = "Q6"
-                text.innerHTML = "Hope I can hear a song of yours one day ;)"
+                text.innerHTML = "Security is a key pillar in the AWS Well-Architected Framework and it is very important to every company."
             }
 
             // Question 7
 
             else if(scrollOffset > 15000 && scrollOffset < 16400 && scoreBoard.className == "Q6"){
-                scoreS.innerHTML= parseFloat(scoreS.innerHTML) + 3;
-                scoreC.innerHTML= parseFloat(scoreC.innerHTML) + 2;
-                scoreA.innerHTML= parseFloat(scoreA.innerHTML) + 1;
+                scoreS.innerHTML= parseFloat(scoreS.innerHTML) + 6;
                 scoreBoard.classList = "Q7"
-                text.innerHTML = "Awesome! Maybe you can help us improve this game أ‿أ"
+                text.innerHTML = "Good! You need WAF to Protect your web applications from common exploits and you need IAM to manage access to your recources!"
             }
 
             // Question 8
 
             else if(scrollOffset > 16500 && scrollOffset < 17500 && scoreBoard.className == "Q7"){
-                scoreE.innerHTML= parseFloat(scoreE.innerHTML) + 3;
-                scoreM.innerHTML= parseFloat(scoreM.innerHTML) + 2;
-                scoreS.innerHTML= parseFloat(scoreS.innerHTML) + 1;
+                scoreS.innerHTML= parseFloat(scoreS.innerHTML) + 4;
                 scoreBoard.classList = "Q8"
-                text.innerHTML = "You like getting stuff done in creative new ways huh? keep it up ;)"
+                text.innerHTML = "Carrying out security assessments like penetration testing can reveal critical security weaknesses in an AWS deployment."
             }
 
             // Question 9
 
             else if(scrollOffset > 20000 && scrollOffset < 21450 && scoreBoard.className == "Q8"){
-                scoreM.innerHTML= parseFloat(scoreM.innerHTML) + 3;
-                scoreI.innerHTML= parseFloat(scoreI.innerHTML) + 2;
-                scoreS.innerHTML= parseFloat(scoreS.innerHTML) + 1;
+                scoreBD.innerHTML= parseFloat(scoreBD.innerHTML) + 3;
                 scoreBoard.classList = "Q9"
-                text.innerHTML = "You must be way younger than me then أ‿أ"
+                text.innerHTML = "That's good to hear! With AWS you can build virtually any big data application!"
             }
 
             // Question 10
 
             else if(scrollOffset > 21600 && scrollOffset < 23000 && scoreBoard.className == "Q9"){
-                scoreA.innerHTML= parseFloat(scoreA.innerHTML) + 3;
-                scoreC.innerHTML= parseFloat(scoreC.innerHTML) + 2;
-                scoreI.innerHTML= parseFloat(scoreI.innerHTML) + 1;
+                scoreBD.innerHTML= parseFloat(scoreBD.innerHTML) + 3;
                 scoreBoard.classList = "Q10"
-                text.innerHTML = "Lucky you! I cant even focus and keep up with asking you these questions (ಥ﹏ಥ)"
+                text.innerHTML = "AWS has a selection of analytics services that fit all your data analytics needs & enables organizations to reinvent their business with data."
             }
 
             // Question 11
 
             else if(scrollOffset > 25000 && scrollOffset < 26150 && scoreBoard.className == "Q10"){
-                scoreI.innerHTML= parseFloat(scoreI.innerHTML) + 3;
-                scoreC.innerHTML= parseFloat(scoreC.innerHTML) + 2;
-                scoreA.innerHTML= parseFloat(scoreA.innerHTML) + 1;
+                scoreASB.innerHTML= parseFloat(scoreASB.innerHTML) + 2;
                 scoreBoard.classList = "Q11"
-                text.innerHTML = "Ah you're going places son!"
+                text.innerHTML = "The Alexa Skills Kit gives developers the ability to utilize Alexa's capabilities by building engaging voice and visual experiences."
             }
 
             // Question 12
 
             else if(scrollOffset > 26400 && scrollOffset < 28000 && scoreBoard.className == "Q11"){
-                scoreC.innerHTML= parseFloat(scoreC.innerHTML) + 3;
-                scoreI.innerHTML= parseFloat(scoreI.innerHTML) + 2;
-                scoreS.innerHTML= parseFloat(scoreS.innerHTML) + 1;
+                scoreASB.innerHTML= parseFloat(scoreASB.innerHTML) + 2;
                 scoreBoard.classList = "Q12"
-                text.innerHTML = "God Bless you Brotha!"
+                text.innerHTML = "There's so much potential to voice user interfaces (VUIs). A VUI is a technology that allows people to use their voices to interact with computers and devices."
             }
         }
     })
@@ -965,57 +904,57 @@ function animate() {
    // Questions go here!!!
 
    if ( scrollOffset > 1000 && scrollOffset < 1300) {
-        text.innerHTML = "1. Have you developed and deployed Alexa skills using AWS services?"
+        text.innerHTML = "1. Have you utilized machine learning algorithms and frameworks to build intelligent applications on AWS?"
     }
     
     //Greeting message
     
     else if(scrollOffset < 1300){
-        text.innerHTML = "Hey little fella! I heard that you were struggling with picking your major... I'm here to help :) keep walking!"
+        text.innerHTML = "Hello there! I'm here to help you on your AWS journey :) Just answer my questions and we'll recommend an AWS speciality that might suit you!"
     }
     
     else if (scrollOffset > 2400 && scrollOffset < 2600) {
-        text.innerHTML = "2. Do you have an interest and/or ability in art?"
+        text.innerHTML = "2. Have you built and trained machine learning models using AWS services like Amazon SageMaker or AWS DeepLens?"
     }
     
     else if (scrollOffset > 5000 && scrollOffset < 5600) {
-        text.innerHTML = "3. Are you interested in intellectual ideas including those that are shaped by religious beliefs?"
+        text.innerHTML = "3. Do you have advanced knowledge of networking concepts and experience in designing complex network architectures on AWS?"
     }
     
     else if (scrollOffset > 7000 && scrollOffset < 7200) {
-        text.innerHTML = "4. Are you interested in science and thinking logically?"
+        text.innerHTML = "4. Have you designed and implemented high-performance, secure, and scalable network infrastructures on AWS?"
     }
     
     else if (scrollOffset > 10000 && scrollOffset < 10400) {
-        text.innerHTML = "5. Do you enjoy learning about living things?"
+        text.innerHTML = "5. Are you experienced in troubleshooting network connectivity and performance issues on AWS?"
     }
     
     else if (scrollOffset > 11800 && scrollOffset < 11900) {
-        text.innerHTML = "6. Do you like to sing and/or play musical instruments?"
+        text.innerHTML = "6. Have you worked on projects that involved implementing and managing security controls and compliance on AWS?"
     }
 
     else if (scrollOffset > 13500 && scrollOffset < 14000) {
-        text.innerHTML = "7. You're interested in graphic and/or Web design?"
+        text.innerHTML = "7. Are you experienced in configuring and managing AWS security services such as IAM and WAF?"
     }
 
     else if (scrollOffset > 16450 && scrollOffset < 16500) {
-        text.innerHTML = "8. Do you like to experiment with better and faster ways of doing things?"
+        text.innerHTML = "8. Have you conducted security assessments, penetration testing, or incident response on AWS environments?"
     }
 
     else if (scrollOffset > 18000 && scrollOffset < 18500) {
-        text.innerHTML = "9. Do you have a great memory and can recognize general principles in particular situations?"
+        text.innerHTML = "9. Are you experienced in designing and implementing scalable and efficient big data solutions on AWS?"
     }
 
     else if (scrollOffset > 21500 && scrollOffset < 21550) {
-        text.innerHTML = "10. Can you work on projects very carefully and thoroughly, with patience and determination?"
+        text.innerHTML = "10. Have you implemented data lakes and data analytics solutions using AWS services like Amazon EMR, Redshift, or Athena?"
     }
 
     else if (scrollOffset > 24000 && scrollOffset < 24500) {
-        text.innerHTML = "11. Are you interested in law, debate, government, and politics?"
+        text.innerHTML = "11. Have you developed and deployed Alexa skills using AWS services?"
     }
 
     else if (scrollOffset > 26200 && scrollOffset < 26300) {
-        text.innerHTML = "12. Do you have strong morals and enjoy helping people?"
+        text.innerHTML = "12. Are you familiar with voice user interface (VUI) design and development using AWS services?"
     }
 
 

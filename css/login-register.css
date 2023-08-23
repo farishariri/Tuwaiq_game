@@ -1,0 +1,152 @@
+/* login form */
+.login {
+    margin-top: 10%;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.register {
+    margin-top: 4%;
+}
+
+.all p {
+    font-size: 1.25rem;
+}
+
+.logoF {
+    text-align: center;
+}
+
+.logoF img {
+    opacity: 0.8;
+}
+
+.main {
+    margin-top: 50px;
+    background-color: rgba(181, 190, 198, 0.651);
+    border-radius: 7px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    width: 400px;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.header-text {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 15px 30px;
+    margin-bottom: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.header-text h2 {
+    margin: 0;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.form {
+    padding: 30px 40px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-control label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.select, .form-control input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: inherit;
+    background: transparent;
+    color: #ffffff;
+}
+
+.select option {
+    background-color: darkgray;
+}
+
+.form-control.success input {
+    border-color: #3489f0;
+}
+
+
+.form-control.error input {
+    border-color: crimson;
+}
+
+::placeholder {
+    color: #ffffff;
+    opacity: 0.6;
+    text-align: center;
+}
+
+.form-control i {
+    position: absolute;
+    visibility: hidden;
+    top: 40px;
+    right: 10px;
+}
+
+.form-control small {
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.form-control.error small {
+    visibility: visible;
+    color: crimson;
+    /* font-weight: bold; */
+    font-size: 16px;
+}
+
+.form button {
+    border: 2px solid #228eec;
+    border-radius: 7px;
+    background: #228eec;
+    color: #ffffff;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    width: 110px;
+    height: 38px;
+    display: block;
+    cursor: pointer;
+    margin: 0 auto 10px;
+}
+
+.form button:hover, .form button:active {
+    background: none;
+}
+
+.form .message {
+    font-family:'Courier New', Courier, monospace;
+    margin: 15px 0 0;
+    text-align: center;
+    color: crimson;
+    font-size: 18px;
+    font-weight: 500;
+}

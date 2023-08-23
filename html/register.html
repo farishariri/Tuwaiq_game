@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/login-register.css">
+
+    <title>Register</title>
+    <script>
+        // callAPI function that takes the base and exponent numbers as parameters
+        var callAPI = (name,email)=>{
+            // instantiate a headers object
+            var myHeaders = new Headers();
+            // add content type header to object
+            myHeaders.append("Content-Type", "application/json");
+            // using built in JSON utility package turn object to string and store in a variable
+            var raw = JSON.stringify({"name":name,"email":email});
+            // create a JSON object with parameters for API call and store in a variable
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+            // make API call with parameters and use promises to get response
+            fetch("https://syuivqvnua.execute-api.us-east-1.amazonaws.com/Test", requestOptions)
+            .then(response => response.text())
+            .then(result => alert(JSON.parse(result).body))
+            .catch(error => console.log('error', error));
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="opacity">
+
+            <!-- navbar -->
+            <nav>
+                <ul class="menu">
+                    <li class="menu-item"><a href="/game.html">Start Game</a></li>
+                    <li class="menu-item"><a href="/index.html">Home</a></li>
+                    <li class="menu-item"><a href="./html/register.html">Register</a></li>
+                    <!-- <li class="menu-item"><a href="./html/order.html">Order</a></li> -->
+                </ul>
+            </nav>
+
+            <!-- register form -->
+            <div class="all register">
+
+                <div class="main">
+
+                    <div class="header-text">
+                        <h2>Register</h2>
+                    </div>
+
+                    <form class="form" id="login-form">
+
+                        <!-- name div -->
+                        <div class="form-control">
+                            <label for="name">Name</label>
+                            <input type="text" placeholder="Name" name="name" id="name">
+                            <small>Error message</small>
+                        </div>
+
+                        <!-- email -->
+                        <div class="form-control">
+                            <label>Email</label>
+                            <input type="email" placeholder="example@gmail.com" id="email">
+                            <small>Error message</small>
+                        </div>
+
+                        <button type="submit" onclick="callAPI(document.getElementById('name').value,document.getElementById('email').value)">Sign Up</button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+        
+    <script type="module" src="../js/registerValidation.js"></script>
+</body>
+
+</html>

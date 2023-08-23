@@ -1,0 +1,244 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.text {
+    font-size: 20px;
+}
+
+.title {
+    display: block;
+    font-family: comfortaa;
+    font-size: 50px;
+    color: black;
+    border-bottom: 2px solid black;
+    width: fit-content;
+    margin-bottom: 20px;
+}
+
+/* navbar */
+nav {
+    padding: 1rem;
+    margin: 1rem;
+    margin-top: 0;
+}
+
+nav .menu, .menu a {
+    color: white;
+    opacity: 1 !important;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.25rem;
+}
+
+/* -- header -- */
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/header-img.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.header p {
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+}
+
+/*-- Description -- */
+
+.description {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    padding: 80px 0 80px 0;
+}
+
+.description p {
+    width: 45%;
+    font-family: cairo;
+    font-size: 20px;
+    margin-left: 10%;
+}
+
+
+/* contact us */
+
+.offers, .contact {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 9%;
+    margin-bottom: 3%;
+}
+
+.contact .names p {
+    font-size: 24px;
+    color: white !important;
+    margin-top: 10px !important;
+}
+
+.contact-div {
+    display: flex;
+
+}
+
+.contact form {
+    width: 40%;
+}
+
+.contact form .fields {
+    display: flex;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.contact form .field, .contact form .fields .field {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.contact form .name {
+    margin-right: 10px;
+}
+
+.contact form .email {
+    margin-left: 10px;
+}
+
+.contact form .fields .field input, .contact form .textarea textarea {
+    width: 100%;
+    height: 100%;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    outline: none;
+    padding: 10px 15px;
+    font-size: 17px;
+    font-family: "Poppins", sans-serif;
+}
+
+.contact form .textarea textarea {
+    padding-top: 10px;
+    resize: none;
+}
+
+.contact form .button {
+    height: 47px;
+    width: 170px;
+}
+
+.contact form .button button {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #228eec;
+    background: #228eec;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 7px;
+    margin-top: 10px;
+}
+
+.contact form .button button:hover {
+    color: #006400;
+    background: none;
+    cursor: pointer;
+}
+
+.sub-title a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.description img {
+    width: 40%;
+    height: 400px;
+    margin-left: 6%;
+    /* Right(if minus = left) ,Top and Bottom ,of shadow*/
+    box-shadow: 10px 0 20px black;
+}
+
+/* card */
+.offers-cards {
+    display: flex;
+}
+
+.offers-cards .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: fit-content;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.offers-cards .card p {
+    font-size: 18px;
+}
+
+.offers-cards .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* reviews cards */
+.review-crads {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.review-card {
+    background: white;
+    color: #006400;
+    width: 20%;
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    padding: 8px;
+}
+
+.review-card p {
+    color: #006400;
+    font-size: 25px;
+}
+
+.review-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.review-container {
+    padding: 2px 16px;
+}
+
+/* menu */
+
+table {
+    width: 50%;
+    margin: 0 auto;
+}
+
+tr, td, th {
+    padding: 1rem;
+    margin: 1rem;
+    color: white;
+    font-size: 1.25rem;
+}
+
+p, a {
+    font-family: 'Courier New', Courier, monospace;   
+   }
